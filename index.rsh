@@ -27,9 +27,9 @@ export const farm = Reach.App(() => {
 
   Creator.publish(stakeToken, rewardToken);
 
-  Creator.interact.deployed();
   commit();
   Creator.pay([[100, rewardToken], [1000, stakeToken]]);
+  Creator.interact.deployed();
 
   const stakeM = new Map(UInt);
   const stake = (p) => fromSome(stakeM[p], 0);
