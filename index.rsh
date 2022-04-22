@@ -133,16 +133,7 @@ export const main = Reach.App(() => {
       (toStake, callback) => {
         callback(null);
 
-        /* PROBLEM 1:
-.../contracts/node_modules/@reach-sh/stdlib/dist/cjs/shared_impl.js:306 fail(new Error("".concat(bl, " errored with ").concat(err)));
-
-Error: stake errored with Error: invalid BigNumber value (argument="value", value=undefined, code=INVALID_ARGUMENT, version=bignumber/5.6.0)
-    at /home/anonymous/github/metafarm-frontend/contracts/node_modules/@reach-sh/stdlib/dist/cjs/shared_impl.js:306:34
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-        */
-        const state = underlyingFarmCtc.claim.withBill([rewardToken])();
-
-        /* PROBLEM 2: 
+/* PROBLEM: 
 Error: stake errored with Error: API call failed: {
   "type": "signAndPost",
   "e": {
@@ -156,7 +147,7 @@ Error: stake errored with Error: API call failed: {
     at .../contracts/node_modules/@reach-sh/stdlib/dist/cjs/shared_impl.js:306:34
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 */
-        //const state = underlyingFarmCtc.stake.pay([0, [toStake, stakeToken], [0, rewardToken]])(toStake);
+        const state = underlyingFarmCtc.stake.pay([0, [toStake, stakeToken], [0, rewardToken]])(toStake);
 
         void (state);
 
