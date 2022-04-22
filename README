@@ -4,7 +4,6 @@ This is my quick and dirty attempt to make minimal example, not very well writte
 
 Usage:
 1. npm install
-2. Uncomment/comment problem you want to see in index.rsh
-3. reach compile
-4. REACH_CONNECTOR_MODE=ALGO-devnet reach devnet
-5. REACH_CONNECTOR_MODE=ALGO-devnet node deploy.mjs
+2. reach compile
+3. REACH_CONNECTOR_MODE=ALGO-devnet reach devnet
+4. REACH_CONNECTOR_MODE=ALGO-devnet node deploy.mjs
