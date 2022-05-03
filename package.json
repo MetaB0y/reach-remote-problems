@@ -2,7 +2,8 @@
   "name": "reach-remote-problems",
   "private": true,
   "dependencies": {
-    "@reach-sh/stdlib": "0.1.10-rc.1"
+    "@reach-sh/stdlib": "0.1.10-rc.2",
+    "loglevel": "^1.8.0"
   },
   "license": "MIT",
   "main": "deploy.mjs"
